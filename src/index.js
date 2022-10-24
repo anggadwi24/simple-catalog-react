@@ -2,12 +2,34 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Home from './component/Home';
+import NoPage from './component/NoPage';
+import Dashboard from './component/Admin/Dashboard';
+import Category from './component/Admin/Category';
+
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
+     <BrowserRouter forceRefresh={true}  >
+      <Routes  >
+        
+          <Route exact  path="/"  element={<Home />} />
+          <Route exact  path="/pyg2022"  element={<Dashboard />} />
+          <Route exact  path="/pyg2022/category"  element={<Category />} />
+
+
+       
+       
+
+          <Route exact path="*" element={<NoPage />} />
+
+        
+       
+      </Routes>
+    </BrowserRouter>
+  
   </React.StrictMode>
 );
 
