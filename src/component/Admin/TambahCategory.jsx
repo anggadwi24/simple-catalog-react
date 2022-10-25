@@ -2,13 +2,13 @@ import React, { Fragment } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import CategoryList from './component/CategoryList';
+import TambahCat from './component/TambahCat';
 import Footer from './component/Footer';
 import Container from 'react-bootstrap/Container';
 import { Helmet } from 'react-helmet';
 
 
-const Category = () => {
+const TambahCategory = () => {
     return (
         <Fragment>
             <Helmet>
@@ -18,7 +18,7 @@ const Category = () => {
                 <Container>
                     <Navbar.Brand href="#home">
                         <img
-                        src={process.env.PUBLIC_URL + '../assets/img/logo.jpg'}
+                        src='https://pyg.juastudio.com/upload/product/logo.jpg'
                         width="30"
                         height="30"
                         className="d-inline-block align-top me-2"
@@ -29,7 +29,7 @@ const Category = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto" >
-                    <Nav.Link href="/pyg2022"  >Home</Nav.Link>
+                    <Nav.Link href="/pyg2022"  className='active'>Home</Nav.Link>
                     
                     <NavDropdown title="Product" className='active' id="basic-nav-dropdown">
                         <NavDropdown.Item href="/pyg2022/product">Product</NavDropdown.Item>
@@ -42,10 +42,10 @@ const Category = () => {
                 </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <CategoryList/>
+            <TambahCat/>
             <Footer></Footer>
         </Fragment>
     )
 }
 
-export default Category;
+export default TambahCategory;
