@@ -5,6 +5,8 @@ import Home from './component/Home';
 import NoPage from './component/NoPage';
 import Dashboard from './component/Admin/Dashboard';
 import Category from './component/Admin/Category';
+import Product from './component/Admin/Product';
+import TambahProduct from './component/Admin/TambahProduct';
 import TambahCategory from './component/Admin/TambahCategory';
 import EditCategory from './component/Admin/EditCategory';
 import reportWebVitals from './reportWebVitals';
@@ -21,6 +23,9 @@ root.render(
           <Route exact  path="/pyg2022/category"  element={<Category />} />
           <Route exact  path="/pyg2022/category/add"  element={<TambahCategory />} />
           <Route exact  path="/pyg2022/category/edit/:slug"  element={<EditCategory />} />
+          <Route exact  path="/pyg2022/product"  element={<Product />} />
+          <Route exact  path="/pyg2022/product/add"  element={<TambahProduct />} />
+
 
 
 

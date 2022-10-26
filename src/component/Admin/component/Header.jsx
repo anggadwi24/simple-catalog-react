@@ -10,7 +10,7 @@ const Header = () => {
         <Container>
             <Navbar.Brand href="#home">
                 <img
-                src={process.env.PUBLIC_URL + 'assets/img/logo.jpg'}
+                src='https://pyg.juastudio.com/upload/product/logo.jpg'
                 width="30"
                 height="30"
                 className="d-inline-block align-top me-2"
